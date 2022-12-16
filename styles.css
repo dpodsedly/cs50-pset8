@@ -33,9 +33,9 @@ main .container .row {
     width: 100%;
 }
 
-#map-container-google {
+.map-container {
     position: fixed;
     bottom: 0;
-    height: 500px;
-    width: 80%;
+    height: 80%;
+    width: 80%; 
 }
