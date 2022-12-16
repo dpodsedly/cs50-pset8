@@ -33,7 +33,7 @@ main .container .row {
     width: 100%;
 }
 
-.map-container {
+.fixed-container {
     position: fixed;
     bottom: 0;
 }
