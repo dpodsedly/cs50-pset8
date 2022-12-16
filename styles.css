@@ -36,6 +36,4 @@ main .container .row {
 .map-container {
     position: fixed;
     bottom: 0;
-    height: 80%;
-    width: 80%; 
 }
