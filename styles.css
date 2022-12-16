@@ -12,7 +12,7 @@
 }
 
 .navbar-nav > li > a, .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    color: white;
+    color: lightyellow;
     font-size: 24px;
 }
 
@@ -22,18 +22,22 @@
    
 
 main .container .row {
-    color: #f1f1f1;   
+    color: lightyellow;   
 }
 
 .page-title {
     position: fixed;
     bottom: 0;
     /* background: rgba(0, 0, 0, 0.5); */
-    color: white;
+    color: lightyellow;
     width: 100%;
 }
 
 .fixed-container {
     position: fixed;
     bottom: 0;
+}
+
+#itinerary-carousel {
+    padding-top: 50px;
 }
