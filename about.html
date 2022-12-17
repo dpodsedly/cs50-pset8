@@ -13,7 +13,12 @@
 
             function ratingSubmitted(rating) {
                 s = rating > 1 ? "stars" : "star";
-                document.querySelector('#rating-stars').innerHTML = '<br>Thanks for your ' + rating + ' ' + s + '! Enjoy the trip.';
+                if(rating > 1) {
+                    message = "Thanks for your " + rating + " stars! Enjoy the trip.";
+                } else {
+                    message = "Gee, thanks. Why you so mean?";
+                }
+                document.querySelector('#rating-stars').innerHTML = "<br>" + message;
             }
 
             function clickOnRating(e) {
