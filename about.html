@@ -11,12 +11,12 @@
 
         <script>
 
-            function sayThankYou(rating) {
+            function ratingSubmitted(rating) {
                 s = rating > 1 ? "stars" : "star";
-                document.querySelector('#ratings').innerHTML = 'Thanks for your ' + rating + ' ' + s + '!';
+                document.querySelector('#rating-stars').innerHTML = '<br>Thanks for your ' + rating + ' ' + s + '! Enjoy the trip.';
             }
 
-            function clickOnStar(e) {
+            function clickOnRating(e) {
                 found = false;
                 rating = 0;
                 document.querySelectorAll('.rating-star').forEach((star) => {
@@ -31,12 +31,12 @@
                     }
                 });
 
-                setTimeout(sayThankYou.bind(null, rating), 1000);
+                setTimeout(ratingSubmitted.bind(null, rating), 1000);
             }
 
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.rating-star').forEach((star) => {
-                    star.addEventListener('click', clickOnStar);
+                    star.addEventListener('click', clickOnRating);
                 });
             });
 
@@ -66,20 +66,20 @@
         </nav>        
             
         <main role="main" class="container">
-            <div class="container" style="padding-top: 80px">
+            <div class="container about">
                 <div class="row">
                     <div class="container">
-                        <h1 style="color:#F9D949">CS50x</h1>
+                        <h1>CS50x</h1>
                         <p>
                             This site was created with Bootstrap for Harvard's <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0" target="_blank"> CS50 Introduction to Computer Science</a> course, problem set 8. 
                         </p>    
                     </div>
                 </div>
                 <div class="row">
-                    <div class="container" style="padding-top: 50px">
+                    <div class="container rating">
                         <h5>How would you rate this assignment?</h5>
                     </div>
-                    <div class="container" id="ratings" style="padding-top: 10px">
+                    <div class="container" id="rating-stars">
                         <img class="rating-star" src="https://www.cssscript.com/demo/star-rating-radio/off.svg">
                         <img class="rating-star" src="https://www.cssscript.com/demo/star-rating-radio/off.svg">
                         <img class="rating-star" src="https://www.cssscript.com/demo/star-rating-radio/off.svg">

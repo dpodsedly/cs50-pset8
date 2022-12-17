@@ -11,7 +11,7 @@
     background-color: #0f0f0f;
 }
 
-a, a:visited, a:hover {
+a, a:visited, a:hover, a:focus {
     color: white;
 }
 
@@ -32,7 +32,6 @@ main .container .row {
 .page-title {
     position: fixed;
     bottom: 0;
-    /* background: rgba(0, 0, 0, 0.5); */
     color: white;
     width: 100%;
 }
@@ -51,3 +50,31 @@ main .container .row {
     padding-right: 20px;
     padding-right: 20px;
 }
+
+.container .caption {
+    padding-top: 50px;
+}
+
+.container .map {
+    position: fixed; 
+    bottom: 0; 
+    height: 85%; 
+    padding-bottom: 20px;
+}
+
+.container .about {
+    padding-top: 100px
+}
+
+.container .about h1 {
+    color:#F9D949;
+}
+
+.container .rating {
+    padding-top: 50px;
+}
+
+#rating-stars {
+    padding-top: 10px;
+}
+
