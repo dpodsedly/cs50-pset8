@@ -8,7 +8,42 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
 
         <title>Our Costa Rica Trip - About</title>
+
+        <script>
+
+            function sayThankYou(rating) {
+                s = rating > 1 ? "stars" : "star";
+                document.querySelector('#ratings').innerHTML = 'Thanks for your ' + rating + ' ' + s + '!';
+            }
+
+            function clickOnStar(e) {
+                found = false;
+                rating = 0;
+                document.querySelectorAll('.rating-star').forEach((star) => {
+                    if(!found) {
+                        rating++;
+                        star.src = "https://www.cssscript.com/demo/star-rating-radio/on.svg";
+                    } else {
+                        star.src = "https://www.cssscript.com/demo/star-rating-radio/off.svg";
+                    }
+                    if(star == e.target) {
+                        found = true;
+                    }
+                });
+
+                setTimeout(sayThankYou.bind(null, rating), 1000);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.rating-star').forEach((star) => {
+                    star.addEventListener('click', clickOnStar);
+                });
+            });
+
+
+        </script>
     </head>
+
     <body class="dark-bg">
 
         <nav class="navbar navbar-expand-md">
@@ -34,9 +69,9 @@
             <div class="container" style="padding-top: 80px">
                 <div class="row">
                     <div class="container">
-                        <h1 style="color: yellow">CS50x</h1>
+                        <h1 style="color:#F9D949">CS50x</h1>
                         <p>
-                            This site was created with Bootstrap for Harvard's <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0"> CS50 Introduction to Computer Science</a> course, problem set 8. 
+                            This site was created with Bootstrap for Harvard's <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0" target="_blank"> CS50 Introduction to Computer Science</a> course, problem set 8. 
                         </p>    
                     </div>
                 </div>
@@ -44,7 +79,7 @@
                     <div class="container" style="padding-top: 50px">
                         <h5>How would you rate this assignment?</h5>
                     </div>
-                    <div class="container" style="padding-top: 10px">
+                    <div class="container" id="ratings" style="padding-top: 10px">
                         <img class="rating-star" src="https://www.cssscript.com/demo/star-rating-radio/off.svg">
                         <img class="rating-star" src="https://www.cssscript.com/demo/star-rating-radio/off.svg">
                         <img class="rating-star" src="https://www.cssscript.com/demo/star-rating-radio/off.svg">
