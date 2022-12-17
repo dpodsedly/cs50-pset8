@@ -12,12 +12,18 @@
 }
 
 a, a:visited, a:hover, a:focus {
-    color: white;
+    color: #f0f0f0;
 }
 
 .navbar-nav > li > a, .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    color: white;
+    color: #f0f0f0;
     font-size: 24px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, h5, p {
+    color: #f0f0f0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-item.active {    
@@ -26,13 +32,13 @@ a, a:visited, a:hover, a:focus {
    
 
 main .container .row {
-    color: white;   
+    color: #f0f0f0;   
 }
 
 .page-title {
     position: fixed;
     bottom: 0;
-    color: white;
+    color: #f0f0f0;
     width: 100%;
 }
 
